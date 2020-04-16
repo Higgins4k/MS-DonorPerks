@@ -1,0 +1,9 @@
+name: DonorPerks
+main: xyz.minestory.donorperks.DonorPerksPlugin
+version: 1.0.0
+author: Higgins
+commands:
+  NebulaPerk:
+    description: Shows the perks for Nebula rank
+    aliases: []
+
