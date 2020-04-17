@@ -2,6 +2,7 @@ package xyz.minestory.donorperks;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import xyz.minestory.donorperks.commands.NebulaPerkCommand;
+import xyz.minestory.donorperks.guis.GalacticGUI;
 import xyz.minestory.donorperks.guis.NebulaGUI;
 
 public class DonorPerksPlugin extends JavaPlugin {
@@ -11,6 +12,7 @@ public class DonorPerksPlugin extends JavaPlugin {
     public void onEnable() {
         registerCommands();
         new NebulaGUI(this);
+        new GalacticGUI(this);
 
 
     }
