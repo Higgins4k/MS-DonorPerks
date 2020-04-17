@@ -1,10 +1,8 @@
 package xyz.minestory.donorperks.guis;
 
-import net.minecraft.server.v1_7_R4.EntityVillager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,18 +12,16 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import xyz.minestory.donorperks.DonorPerksPlugin;
 
-public class NebulaGUI implements Listener {
-
+public class GalacticGUI implements Listener {
     private DonorPerksPlugin plugin;
-    public NebulaGUI(DonorPerksPlugin plugin){
+    public GalacticGUI(DonorPerksPlugin plugin){
         this.plugin = plugin;
-
         Bukkit.getPluginManager().registerEvents(this, plugin);
     }
 
-    public static Inventory NebulaInventory = Bukkit.createInventory(null, 9, "Nebula Perks and Rewards");
-    private static Inventory NebulaPerks = Bukkit.createInventory(null, 9, "Nebula Perks");
-    private static Inventory NebulaCommands = Bukkit.createInventory(null, 18, "Nebula Commands");
+    public static Inventory GalacticInventory = Bukkit.createInventory(null, 9, "Galactic Perks and Rewards");
+    private static Inventory GalacticCommands = Bukkit.createInventory(null, 18, "Galactic Commands");
+    private static Inventory GalacticPerks = Bukkit.createInventory(null, 9, "Galactic Perks");
 
 
     static {
@@ -75,40 +71,25 @@ public class NebulaGUI implements Listener {
         fixm.setDisplayName(ChatColor.LIGHT_PURPLE + "/fix");
         fix.setItemMeta(fixm);
 
-        ItemStack fixall = new ItemStack(Material.ANVIL);
-        ItemMeta fixallm = fixall.getItemMeta();
-        fixallm.setDisplayName(ChatColor.LIGHT_PURPLE + "/fix all");
-        fixall.setItemMeta(fixallm);
-
-        ItemStack condense = new ItemStack(Material.HOPPER);
-        ItemMeta conm = condense.getItemMeta();
-        conm.setDisplayName(ChatColor.LIGHT_PURPLE + "/condense");
-        condense.setItemMeta(conm);
-
         ItemStack fly = new ItemStack(Material.NAME_TAG);
         ItemMeta flym = fly.getItemMeta();
         flym.setDisplayName(ChatColor.LIGHT_PURPLE + "/fly");
         fly.setItemMeta(flym);
 
-        ItemStack godmode = new ItemStack(Material.DIAMOND_CHESTPLATE);
-        ItemMeta godmodem = godmode.getItemMeta();
-        godmodem.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to /god");
-        godmode.setItemMeta(godmodem);
-
         //Perks start here
-        ItemStack nebulakit = new ItemStack(Material.DIAMOND);
-        ItemMeta nkm = nebulakit.getItemMeta();
-        nkm.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to Nebula Kit");
-        nebulakit.setItemMeta(nkm);
+        ItemStack galactickit = new ItemStack(Material.DIAMOND);
+        ItemMeta gkm = galactickit.getItemMeta();
+        gkm.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to Galactic Kit");
+        galactickit.setItemMeta(gkm);
 
         ItemStack pv = new ItemStack(Material.ENDER_CHEST);
-        ItemMeta pv8 = pv.getItemMeta();
-        pv8.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to 8 Player Vaults");
-        pv.setItemMeta(pv8);
+        ItemMeta pv7 = pv.getItemMeta();
+        pv7.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to 7 Player Vaults");
+        pv.setItemMeta(pv7);
 
         ItemStack homes = new ItemStack(Material.BED);
         ItemMeta homesm = homes.getItemMeta();
-        homesm.setDisplayName(ChatColor.LIGHT_PURPLE + "30 homes");
+        homesm.setDisplayName(ChatColor.LIGHT_PURPLE + "25 homes");
         homes.setItemMeta(homesm);
 
         ItemStack csigns = new ItemStack(Material.SIGN);
@@ -116,77 +97,65 @@ public class NebulaGUI implements Listener {
         csignsm.setDisplayName(ChatColor.LIGHT_PURPLE + "Ability to use colored text on signs");
         csigns.setItemMeta(csignsm);
 
+        GalacticInventory.setItem(0, diamondblock);
+        GalacticInventory.setItem(4, goldblock);
+        GalacticInventory.setItem(8, purchase);
+        GalacticCommands.setItem(0, enderchest);
+        GalacticCommands.setItem(1, feed);
+        GalacticCommands.setItem(2, playertime);
+        GalacticCommands.setItem(3, workbench);
+        GalacticCommands.setItem(4, pweather);
+        GalacticCommands.setItem(5, fix);
+        GalacticCommands.setItem(6, fly);
+        GalacticCommands.setItem(8, purchase);
+        GalacticPerks.setItem(0, galactickit);
+        GalacticPerks.setItem(2, pv);
+        GalacticPerks.setItem(4, homes);
+        GalacticPerks.setItem(6, csigns);
+        GalacticPerks.setItem(8, purchase);
 
 
-        NebulaInventory.setItem(0, diamondblock);
-        NebulaInventory.setItem(4, goldblock);
-        NebulaInventory.setItem(8, purchase);
-        NebulaCommands.setItem(0, enderchest);
-        NebulaCommands.setItem(1, feed);
-        NebulaCommands.setItem(2, playertime);
-        NebulaCommands.setItem(3, workbench);
-        NebulaCommands.setItem(4, pweather);
-        NebulaCommands.setItem(5, fix);
-        NebulaCommands.setItem(6, fixall);
-        NebulaCommands.setItem(7, condense);
-        NebulaCommands.setItem(8, fly);
-        NebulaCommands.setItem(9, godmode);
-        NebulaCommands.setItem(17, purchase);
-        NebulaPerks.setItem(0, nebulakit);
-        NebulaPerks.setItem(2, pv);
-        NebulaPerks.setItem(4, homes);
-        NebulaPerks.setItem(6, csigns);
-        NebulaPerks.setItem(8, purchase);
+
     }
+
 
 
 
     @EventHandler
-    public void onInVentoryClick(InventoryClickEvent event){
+    public void onInventoryClick(InventoryClickEvent event){
         Player player = (Player) event.getWhoClicked();
         ItemStack clicked = event.getCurrentItem();
         Inventory inventory = event.getInventory();
-        if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+        if (event.getView().getTitle().equalsIgnoreCase("Galactic Perks and Rewards")){
             if (clicked.getType() == Material.DIAMOND_BLOCK){
                 event.setCancelled(true);
                 player.closeInventory();
-                player.openInventory(NebulaCommands);
+                player.openInventory(GalacticCommands);
             }
-            if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+        }
+            if (event.getView().getTitle().equalsIgnoreCase("Galactic Perks and Rewards")){
                 if (clicked.getType() == Material.GOLD_BLOCK){
                     event.setCancelled(true);
                     player.closeInventory();
-                    player.openInventory(NebulaPerks);
+                    player.openInventory(GalacticPerks);
                 }
             }
-            if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+            if (event.getView().getTitle().equalsIgnoreCase("Galactic Perks and Rewards")){
                 if (clicked.getType() == Material.BOOK){
                     event.setCancelled(true);
-                    player.sendMessage(ChatColor.BLUE + "You can purchase the Nebula Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
+                    player.sendMessage(ChatColor.BLUE + "You can purchase the Galactic Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
                     player.closeInventory();
-                }
             }
         }
-            if (event.getView().getTitle().equalsIgnoreCase("Nebula Commands")){
-                if (clicked.getType() == Material.BOOK){
-                    event.setCancelled(true);
-                    player.sendMessage(ChatColor.BLUE + "You can purchase the Nebula Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
-                    player.closeInventory();
-                }else {
-                    event.setCancelled(true);
-                }
-        }
-            if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks")){
-                if (clicked.getType() == Material.BOOK){
-                    event.setCancelled(true);
-                    player.sendMessage(ChatColor.BLUE + "You can purchase the Nebula Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
-                    player.closeInventory();
-                }else{
-                    event.setCancelled(true);
-                }
+            if (event.getView().getTitle().equalsIgnoreCase("Galactic Commands")){
+                event.setCancelled(true);
             }
-    }
+            if (event.getView().getTitle().equalsIgnoreCase("Galactic Perks")){
+                event.setCancelled(true);
+            }
 
+
+    }
 
 
 
