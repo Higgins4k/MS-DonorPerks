@@ -12,16 +12,16 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import xyz.minestory.donorperks.DonorPerksPlugin;
 
-public class CosmicGUI implements Listener {
+public class SolarGUI implements Listener {
     private DonorPerksPlugin plugin;
-    public CosmicGUI(DonorPerksPlugin plugin){
+    public SolarGUI(DonorPerksPlugin plugin){
         this.plugin = plugin;
         Bukkit.getPluginManager().registerEvents(this, plugin);
     }
 
-    public static Inventory CosmicInventory = Bukkit.createInventory(null, 9, "Cosmic Perks and Rewards");
-    private static Inventory CosmicCommands = Bukkit.createInventory(null, 18, "Cosmic Commands");
-    private static Inventory CosmicPerks = Bukkit.createInventory(null, 9, "Cosmic Perks");
+    public static Inventory SolarInventory = Bukkit.createInventory(null, 9, "Solar Perks and Rewards");
+    private static Inventory SolarCommands = Bukkit.createInventory(null, 18, "Solar Commands");
+    private static Inventory SolarPerks = Bukkit.createInventory(null, 9, "Solar Perks");
 
 
     static {
@@ -66,25 +66,20 @@ public class CosmicGUI implements Listener {
         pweatherm.setDisplayName(ChatColor.LIGHT_PURPLE + "/pweather");
         pweather.setItemMeta(pweatherm);
 
-        ItemStack fix = new ItemStack(Material.ANVIL);
-        ItemMeta fixm = fix.getItemMeta();
-        fixm.setDisplayName(ChatColor.LIGHT_PURPLE + "/fix");
-        fix.setItemMeta(fixm);
-
         //Perks start here
         ItemStack cosmickit = new ItemStack(Material.DIAMOND);
         ItemMeta ckm = cosmickit.getItemMeta();
-        ckm.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to Cosmic Kit");
+        ckm.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to Solar Kit");
         cosmickit.setItemMeta(ckm);
 
         ItemStack pv = new ItemStack(Material.ENDER_CHEST);
         ItemMeta pv7 = pv.getItemMeta();
-        pv7.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to 6 Player Vaults");
+        pv7.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to 5 Player Vaults");
         pv.setItemMeta(pv7);
 
         ItemStack homes = new ItemStack(Material.BED);
         ItemMeta homesm = homes.getItemMeta();
-        homesm.setDisplayName(ChatColor.LIGHT_PURPLE + "20 homes");
+        homesm.setDisplayName(ChatColor.LIGHT_PURPLE + "15 homes");
         homes.setItemMeta(homesm);
 
         ItemStack csigns = new ItemStack(Material.SIGN);
@@ -92,21 +87,20 @@ public class CosmicGUI implements Listener {
         csignsm.setDisplayName(ChatColor.LIGHT_PURPLE + "Ability to use colored text on signs");
         csigns.setItemMeta(csignsm);
 
-        CosmicInventory.setItem(0, diamondblock);
-        CosmicInventory.setItem(4, goldblock);
-        CosmicInventory.setItem(8, purchase);
-        CosmicCommands.setItem(0, enderchest);
-        CosmicCommands.setItem(1, feed);
-        CosmicCommands.setItem(2, playertime);
-        CosmicCommands.setItem(3, workbench);
-        CosmicCommands.setItem(4, pweather);
-        CosmicCommands.setItem(5, fix);
-        CosmicCommands.setItem(8, purchase);
-        CosmicPerks.setItem(0, cosmickit);
-        CosmicPerks.setItem(2, pv);
-        CosmicPerks.setItem(4, homes);
-        CosmicPerks.setItem(6, csigns);
-        CosmicPerks.setItem(8, purchase);
+        SolarInventory.setItem(0, diamondblock);
+        SolarInventory.setItem(4, goldblock);
+        SolarInventory.setItem(8, purchase);
+        SolarCommands.setItem(0, enderchest);
+        SolarCommands.setItem(1, feed);
+        SolarCommands.setItem(2, playertime);
+        SolarCommands.setItem(3, workbench);
+        SolarCommands.setItem(4, pweather);
+        SolarCommands.setItem(8, purchase);
+        SolarPerks.setItem(0, cosmickit);
+        SolarPerks.setItem(2, pv);
+        SolarPerks.setItem(4, homes);
+        SolarPerks.setItem(6, csigns);
+        SolarPerks.setItem(8, purchase);
 
 
 
@@ -120,31 +114,31 @@ public class CosmicGUI implements Listener {
         Player player = (Player) event.getWhoClicked();
         ItemStack clicked = event.getCurrentItem();
         Inventory inventory = event.getInventory();
-        if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks and Rewards")){
+        if (event.getView().getTitle().equalsIgnoreCase("Solar Perks and Rewards")){
             if (clicked.getType() == Material.DIAMOND_BLOCK){
                 event.setCancelled(true);
                 player.closeInventory();
-                player.openInventory(CosmicCommands);
+                player.openInventory(SolarCommands);
             }
         }
-        if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks and Rewards")){
+        if (event.getView().getTitle().equalsIgnoreCase("Solar Perks and Rewards")){
             if (clicked.getType() == Material.GOLD_BLOCK){
                 event.setCancelled(true);
                 player.closeInventory();
-                player.openInventory(CosmicPerks);
+                player.openInventory(SolarPerks);
             }
         }
-        if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks and Rewards")){
+        if (event.getView().getTitle().equalsIgnoreCase("Solar Perks and Rewards")){
             if (clicked.getType() == Material.BOOK){
                 event.setCancelled(true);
-                player.sendMessage(ChatColor.BLUE + "You can purchase the Cosmic Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
+                player.sendMessage(ChatColor.BLUE + "You can purchase the Solar Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
                 player.closeInventory();
             }
         }
-        if (event.getView().getTitle().equalsIgnoreCase("Cosmic Commands")){
+        if (event.getView().getTitle().equalsIgnoreCase("Solar Commands")){
             event.setCancelled(true);
         }
-        if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks")){
+        if (event.getView().getTitle().equalsIgnoreCase("Solar Perks")){
             event.setCancelled(true);
         }
 
@@ -154,6 +148,3 @@ public class CosmicGUI implements Listener {
 
 
 }
-
-
-
