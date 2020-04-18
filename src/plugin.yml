@@ -6,4 +6,13 @@ commands:
   NebulaPerk:
     description: Shows the perks for Nebula rank
     aliases: []
+  GalacticPerk:
+    description: Shows the perks for Galactic rank
+    aliases: []
+  CosmicPerk:
+    description: Shows the perks for Cosmic rank
+    aliases: []
+  SolarPerk:
+    description: Shows the perks for Solar rank
+    aliases: []
 
