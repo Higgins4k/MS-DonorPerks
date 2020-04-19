@@ -142,10 +142,18 @@ public class CosmicGUI implements Listener {
             }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Cosmic Commands")){
-            event.setCancelled(true);
+            if (clicked.getType() == Material.BOOK){
+             player.sendMessage(ChatColor.BLUE + "You can purchase the Cosmic Rank here" + ChatColor.AQUA + "shop.minestory.xyz");
+            }else {
+                event.setCancelled(true);
+            }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks")){
-            event.setCancelled(true);
+            if (clicked.getType() == Material.BOOK){
+                player.sendMessage(ChatColor.BLUE + "You can purchase the Cosmic Rank here" + ChatColor.AQUA + "shop.minestory.xyz");
+            }else {
+                event.setCancelled(true);
+            }
         }
 
 

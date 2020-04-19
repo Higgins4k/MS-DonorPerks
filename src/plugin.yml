@@ -3,6 +3,9 @@ main: xyz.minestory.donorperks.DonorPerksPlugin
 version: 1.0.0
 author: Higgins
 commands:
+  StoryPerk:
+    description: Shows the perks for Solar rank
+    aliases: []
   NebulaPerk:
     description: Shows the perks for Nebula rank
     aliases: []

@@ -1,14 +1,8 @@
 package xyz.minestory.donorperks;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import xyz.minestory.donorperks.commands.CosmicPerkCommand;
-import xyz.minestory.donorperks.commands.GalacticPerkCommand;
-import xyz.minestory.donorperks.commands.NebulaPerkCommand;
-import xyz.minestory.donorperks.commands.SolarPerkCommand;
-import xyz.minestory.donorperks.guis.CosmicGUI;
-import xyz.minestory.donorperks.guis.GalacticGUI;
-import xyz.minestory.donorperks.guis.NebulaGUI;
-import xyz.minestory.donorperks.guis.SolarGUI;
+import xyz.minestory.donorperks.commands.*;
+import xyz.minestory.donorperks.guis.*;
 
 public class DonorPerksPlugin extends JavaPlugin {
 
@@ -20,6 +14,7 @@ public class DonorPerksPlugin extends JavaPlugin {
         new GalacticGUI(this);
         new CosmicGUI(this);
         new SolarGUI(this);
+        new StoryGUI(this);
 
 
     }
@@ -29,6 +24,7 @@ public class DonorPerksPlugin extends JavaPlugin {
         this.getCommand("GalacticPerk").setExecutor(new GalacticPerkCommand());
         this.getCommand("CosmicPerk").setExecutor(new CosmicPerkCommand());
         this.getCommand("SolarPerk").setExecutor(new SolarPerkCommand());
+        this.getCommand("StoryPerk").setExecutor(new StoryPerkCommand());
 
 
     }
