@@ -15,6 +15,7 @@ public class DonorPerksPlugin extends JavaPlugin {
         new CosmicGUI(this);
         new SolarGUI(this);
         new StoryGUI(this);
+        new StarGUI(this);
 
 
     }
