@@ -18,4 +18,6 @@ commands:
   SolarPerk:
     description: Shows the perks for Solar rank
     aliases: []
-
+  StarPerk:
+    description: Shows the perks for Star rank
+    aliases: []
