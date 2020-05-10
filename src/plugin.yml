@@ -21,3 +21,6 @@ commands:
   StarPerk:
     description: Shows the perks for Star rank
     aliases: []
+  FlarePerk:
+    description: Shows the perks for Flare rank
+    aliases: []

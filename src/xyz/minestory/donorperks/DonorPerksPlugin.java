@@ -14,8 +14,9 @@ public class DonorPerksPlugin extends JavaPlugin {
         new GalacticGUI(this);
         new CosmicGUI(this);
         new SolarGUI(this);
-        new StoryGUI(this);
+        //new StoryGUI(this);
         new StarGUI(this);
+        new FlareGUI(this);
 
 
     }
@@ -27,6 +28,7 @@ public class DonorPerksPlugin extends JavaPlugin {
         this.getCommand("SolarPerk").setExecutor(new SolarPerkCommand());
         this.getCommand("StoryPerk").setExecutor(new StoryPerkCommand());
         this.getCommand("StarPerk").setExecutor(new StarPerkCommand());
+        this.getCommand("FlarePerk").setExecutor(new FlarePerkCommand());
 
 
     }
