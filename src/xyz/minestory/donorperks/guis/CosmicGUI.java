@@ -121,6 +121,10 @@ public class CosmicGUI implements Listener {
         ItemStack clicked = event.getCurrentItem();
         Inventory inventory = event.getInventory();
         if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks and Rewards")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.DIAMOND_BLOCK){
                 event.setCancelled(true);
                 player.closeInventory();
@@ -128,6 +132,10 @@ public class CosmicGUI implements Listener {
             }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks and Rewards")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.GOLD_BLOCK){
                 event.setCancelled(true);
                 player.closeInventory();
@@ -135,6 +143,10 @@ public class CosmicGUI implements Listener {
             }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks and Rewards")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.BOOK){
                 event.setCancelled(true);
                 player.sendMessage(ChatColor.BLUE + "You can purchase the Cosmic Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
@@ -142,15 +154,23 @@ public class CosmicGUI implements Listener {
             }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Cosmic Commands")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.BOOK){
-             player.sendMessage(ChatColor.BLUE + "You can purchase the Cosmic Rank here" + ChatColor.AQUA + "shop.minestory.xyz");
+             player.sendMessage(ChatColor.BLUE + "You can purchase the Cosmic Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
             }else {
                 event.setCancelled(true);
             }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Cosmic Perks")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.BOOK){
-                player.sendMessage(ChatColor.BLUE + "You can purchase the Cosmic Rank here" + ChatColor.AQUA + "shop.minestory.xyz");
+                player.sendMessage(ChatColor.BLUE + "You can purchase the Cosmic Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
             }else {
                 event.setCancelled(true);
             }
