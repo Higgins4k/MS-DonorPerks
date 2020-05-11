@@ -147,12 +147,20 @@ public class NebulaGUI implements Listener {
         ItemStack clicked = event.getCurrentItem();
         Inventory inventory = event.getInventory();
         if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.DIAMOND_BLOCK){
                 event.setCancelled(true);
                 player.closeInventory();
                 player.openInventory(NebulaCommands);
             }
             if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+                e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
                 if (clicked.getType() == Material.GOLD_BLOCK){
                     event.setCancelled(true);
                     player.closeInventory();
@@ -160,6 +168,10 @@ public class NebulaGUI implements Listener {
                 }
             }
             if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+                e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
                 if (clicked.getType() == Material.BOOK){
                     event.setCancelled(true);
                     player.sendMessage(ChatColor.BLUE + "You can purchase the Nebula Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
@@ -168,6 +180,10 @@ public class NebulaGUI implements Listener {
             }
         }
             if (event.getView().getTitle().equalsIgnoreCase("Nebula Commands")){
+                e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
                 if (clicked.getType() == Material.BOOK){
                     event.setCancelled(true);
                     player.sendMessage(ChatColor.BLUE + "You can purchase the Nebula Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
@@ -177,6 +193,10 @@ public class NebulaGUI implements Listener {
                 }
         }
             if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks")){
+                e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
                 if (clicked.getType() == Material.BOOK){
                     event.setCancelled(true);
                     player.sendMessage(ChatColor.BLUE + "You can purchase the Nebula Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
