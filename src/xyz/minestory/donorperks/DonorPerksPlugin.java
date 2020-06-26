@@ -18,18 +18,25 @@ public class DonorPerksPlugin extends JavaPlugin {
         new StarGUI(this);
         new FlareGUI(this);
 
+        saveDefaultConfig();
+
 
     }
 
     private void registerCommands() {
-        this.getCommand("NebulaPerk").setExecutor(new NebulaPerkCommand());
-        this.getCommand("GalacticPerk").setExecutor(new GalacticPerkCommand());
-        this.getCommand("CosmicPerk").setExecutor(new CosmicPerkCommand());
-        this.getCommand("SolarPerk").setExecutor(new SolarPerkCommand());
+        if (getConfig().getBoolean("survival")) {
+            this.getCommand("NebulaPerk").setExecutor(new NebulaPerkCommand());
+            this.getCommand("GalacticPerk").setExecutor(new GalacticPerkCommand());
+            this.getCommand("CosmicPerk").setExecutor(new CosmicPerkCommand());
+            this.getCommand("SolarPerk").setExecutor(new SolarPerkCommand());
 //        this.getCommand("StoryPerk").setExecutor(new StoryPerkCommand());
-        this.getCommand("StarPerk").setExecutor(new StarPerkCommand());
-        this.getCommand("FlarePerk").setExecutor(new FlarePerkCommand());
+            this.getCommand("StarPerk").setExecutor(new StarPerkCommand());
+            this.getCommand("FlarePerk").setExecutor(new FlarePerkCommand());
+        }
 
+        if (getConfig().getBoolean("skyblock")){
+            //nothing yet
+        }
 
     }
 

@@ -1,0 +1,3 @@
+#What ranks should load by default, this will not stop the GUIs for them but only the commands from being loaded
+survival: false
+skyblock: false

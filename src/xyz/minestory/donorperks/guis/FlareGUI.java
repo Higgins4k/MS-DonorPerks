@@ -1,6 +1,6 @@
 package xyz.minestory.donorperks.guis;
 
-import net.minecraft.util.org.apache.commons.lang3.ObjectUtils;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -52,12 +52,12 @@ public class FlareGUI implements Listener {
         fm.setDisplayName(ChatColor.LIGHT_PURPLE + "/feed");
         feed.setItemMeta(fm);
 
-        ItemStack playertime = new ItemStack(Material.WATCH);
+        ItemStack playertime = new ItemStack(Material.CLOCK);
         ItemMeta timem = playertime.getItemMeta();
         timem.setDisplayName(ChatColor.LIGHT_PURPLE + "/heal");
         playertime.setItemMeta(timem);
 
-        ItemStack workbench = new ItemStack(Material.WORKBENCH);
+        ItemStack workbench = new ItemStack(Material.CRAFTING_TABLE);
         ItemMeta wbm = workbench.getItemMeta();
         wbm.setDisplayName(ChatColor.LIGHT_PURPLE + "/Workbench");
         workbench.setItemMeta(wbm);
@@ -73,12 +73,12 @@ public class FlareGUI implements Listener {
         pv7.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to 3 Player Vaults");
         pv.setItemMeta(pv7);
 
-        ItemStack homes = new ItemStack(Material.BED);
+        ItemStack homes = new ItemStack(Material.RED_BED);
         ItemMeta homesm = homes.getItemMeta();
         homesm.setDisplayName(ChatColor.LIGHT_PURPLE + "5 homes");
         homes.setItemMeta(homesm);
 
-        ItemStack csigns = new ItemStack(Material.SIGN);
+        ItemStack csigns = new ItemStack(Material.OAK_SIGN);
         ItemMeta csignsm = csigns.getItemMeta();
         csignsm.setDisplayName(ChatColor.LIGHT_PURPLE + "Ability to use colored text on signs");
         csigns.setItemMeta(csignsm);

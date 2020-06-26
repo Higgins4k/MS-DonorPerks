@@ -1,6 +1,5 @@
 package xyz.minestory.donorperks.guis;
 
-import net.minecraft.server.v1_7_R4.EntityVillager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -55,17 +54,17 @@ public class NebulaGUI implements Listener {
         fm.setDisplayName(ChatColor.LIGHT_PURPLE + "/feed");
         feed.setItemMeta(fm);
 
-        ItemStack playertime = new ItemStack(Material.WATCH);
+        ItemStack playertime = new ItemStack(Material.CLOCK);
         ItemMeta timem = playertime.getItemMeta();
         timem.setDisplayName(ChatColor.LIGHT_PURPLE + "/playertime");
         playertime.setItemMeta(timem);
 
-        ItemStack workbench = new ItemStack(Material.WORKBENCH);
+        ItemStack workbench = new ItemStack(Material.CRAFTING_TABLE);
         ItemMeta wbm = workbench.getItemMeta();
         wbm.setDisplayName(ChatColor.LIGHT_PURPLE + "/Workbench");
         workbench.setItemMeta(wbm);
 
-        ItemStack pweather = new ItemStack(Material.YELLOW_FLOWER);
+        ItemStack pweather = new ItemStack(Material.POPPY);
         ItemMeta pweatherm = pweather.getItemMeta();
         pweatherm.setDisplayName(ChatColor.LIGHT_PURPLE + "/pweather");
         pweather.setItemMeta(pweatherm);
@@ -106,12 +105,12 @@ public class NebulaGUI implements Listener {
         pv8.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to 8 Player Vaults");
         pv.setItemMeta(pv8);
 
-        ItemStack homes = new ItemStack(Material.BED);
+        ItemStack homes = new ItemStack(Material.RED_BED);
         ItemMeta homesm = homes.getItemMeta();
         homesm.setDisplayName(ChatColor.LIGHT_PURPLE + "30 homes");
         homes.setItemMeta(homesm);
 
-        ItemStack csigns = new ItemStack(Material.SIGN);
+        ItemStack csigns = new ItemStack(Material.OAK_SIGN);
         ItemMeta csignsm = csigns.getItemMeta();
         csignsm.setDisplayName(ChatColor.LIGHT_PURPLE + "Ability to use colored text on signs");
         csigns.setItemMeta(csignsm);
