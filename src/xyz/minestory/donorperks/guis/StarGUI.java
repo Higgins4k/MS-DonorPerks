@@ -109,6 +109,10 @@ public class StarGUI implements Listener {
         ItemStack clicked = event.getCurrentItem();
         Inventory inventory = event.getInventory();
         if (event.getView().getTitle().equalsIgnoreCase("Star Perks and Rewards")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.DIAMOND_BLOCK){
                 event.setCancelled(true);
                 player.closeInventory();
@@ -116,6 +120,10 @@ public class StarGUI implements Listener {
             }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Star Perks and Rewards")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.GOLD_BLOCK){
                 event.setCancelled(true);
                 player.closeInventory();
@@ -123,6 +131,10 @@ public class StarGUI implements Listener {
             }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Star Perks and Rewards")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             if (clicked.getType() == Material.BOOK){
                 event.setCancelled(true);
                 player.sendMessage(ChatColor.BLUE + "You can purchase the Star Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
@@ -130,9 +142,17 @@ public class StarGUI implements Listener {
             }
         }
         if (event.getView().getTitle().equalsIgnoreCase("Star Commands")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             event.setCancelled(true);
         }
         if (event.getView().getTitle().equalsIgnoreCase("Star Perks")){
+            e.setCancelled(true);
+            if (e.getCurrentItem() == null) {
+                return;
+            }
             event.setCancelled(true);
         }
 

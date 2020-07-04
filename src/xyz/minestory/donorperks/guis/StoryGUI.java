@@ -147,12 +147,20 @@
 //        ItemStack clicked = event.getCurrentItem();
 //        Inventory inventory = event.getInventory();
 //        if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+//        e.setCancelled(true);
+//                    if (e.getCurrentItem() == null) {
+//                        return;
+//                    }
 //            if (clicked.getType() == Material.DIAMOND_BLOCK){
 //                event.setCancelled(true);
 //                player.closeInventory();
 //                player.openInventory(StoryCommands);
 //            }
 //            if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+//        e.setCancelled(true);
+//                    if (e.getCurrentItem() == null) {
+//                        return;
+//                    }
 //                if (clicked.getType() == Material.GOLD_BLOCK){
 //                    event.setCancelled(true);
 //                    player.closeInventory();
@@ -160,6 +168,10 @@
 //                }
 //            }
 //            if (event.getView().getTitle().equalsIgnoreCase("Nebula Perks and Rewards")){
+//        e.setCancelled(true);
+//                    if (e.getCurrentItem() == null) {
+//                        return;
+//                    }
 //                if (clicked.getType() == Material.BOOK){
 //                    event.setCancelled(true);
 //                    player.sendMessage(ChatColor.BLUE + "You can purchase the Story Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
@@ -168,6 +180,10 @@
 //            }
 //        }
 //        if (event.getView().getTitle().equalsIgnoreCase("Story Commands")){
+//        e.setCancelled(true);
+//                    if (e.getCurrentItem() == null) {
+//                        return;
+//                    }
 //            if (clicked.getType() == Material.BOOK){
 //                event.setCancelled(true);
 //                player.sendMessage(ChatColor.BLUE + "You can purchase the Story Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
@@ -177,6 +193,10 @@
 //            }
 //        }
 //        if (event.getView().getTitle().equalsIgnoreCase("Story Perks")){
+//        e.setCancelled(true);
+//                    if (e.getCurrentItem() == null) {
+//                        return;
+//                    }
 //            if (clicked.getType() == Material.BOOK){
 //                event.setCancelled(true);
 //                player.sendMessage(ChatColor.BLUE + "You can purchase the Story Rank here" + ChatColor.AQUA + " shop.minestory.xyz");
