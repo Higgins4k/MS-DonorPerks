@@ -29,7 +29,7 @@ public class DonorPerksPlugin extends JavaPlugin {
             this.getCommand("GalacticPerk").setExecutor(new GalacticPerkCommand());
             this.getCommand("CosmicPerk").setExecutor(new CosmicPerkCommand());
             this.getCommand("SolarPerk").setExecutor(new SolarPerkCommand());
-//        this.getCommand("StoryPerk").setExecutor(new StoryPerkCommand());
+        this.getCommand("StoryPerk").setExecutor(new StoryPerkCommand());
             this.getCommand("StarPerk").setExecutor(new StarPerkCommand());
             this.getCommand("FlarePerk").setExecutor(new FlarePerkCommand());
         }
