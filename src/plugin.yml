@@ -25,3 +25,6 @@ commands:
   FlarePerk:
     description: Shows the perks for Flare rank
     aliases: []
+  MartianPerk:
+    description: Shows the perks for Martian rank
+    aliases: []

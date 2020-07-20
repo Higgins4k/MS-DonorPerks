@@ -3,6 +3,7 @@ package xyz.minestory.donorperks;
 import org.bukkit.plugin.java.JavaPlugin;
 import xyz.minestory.donorperks.commands.*;
 import xyz.minestory.donorperks.guis.*;
+import xyz.minestory.donorperks.skyblock.commands.MartianCommand;
 
 public class DonorPerksPlugin extends JavaPlugin {
 
@@ -35,7 +36,7 @@ public class DonorPerksPlugin extends JavaPlugin {
         }
 
         if (getConfig().getBoolean("skyblock")){
-            //nothing yet
+           this.getCommand("MartianPerk").setExecutor(new MartianCommand());
         }
 
     }
