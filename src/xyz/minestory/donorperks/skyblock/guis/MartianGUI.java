@@ -58,7 +58,7 @@ public class MartianGUI implements Listener {
         timem.setDisplayName(ChatColor.LIGHT_PURPLE + "/playertime");
         playertime.setItemMeta(timem);
 
-        ItemStack workbench = new ItemStack(Material.CRAFTING_TABLE);
+        ItemStack workbench = new ItemStack(Material.LEGACY_WORKBENCH);
         ItemMeta wbm = workbench.getItemMeta();
         wbm.setDisplayName(ChatColor.LIGHT_PURPLE + "/craft");
         workbench.setItemMeta(wbm);
@@ -83,12 +83,12 @@ public class MartianGUI implements Listener {
         conm.setDisplayName(ChatColor.LIGHT_PURPLE + "/heal");
         condense.setItemMeta(conm);
 
-        ItemStack fly = new ItemStack(Material.NAME_TAG);
+        ItemStack fly = new ItemStack(Material.LEGACY_NAME_TAG);
         ItemMeta flym = fly.getItemMeta();
         flym.setDisplayName(ChatColor.LIGHT_PURPLE + "/fly");
         fly.setItemMeta(flym);
 
-        ItemStack godmode = new ItemStack(Material.DIAMOND_CHESTPLATE);
+        ItemStack godmode = new ItemStack(Material.LEGACY_DIAMOND_CHESTPLATE);
         ItemMeta godmodem = godmode.getItemMeta();
         godmodem.setDisplayName(ChatColor.LIGHT_PURPLE + "/nick");
         godmode.setItemMeta(godmodem);
@@ -104,12 +104,12 @@ public class MartianGUI implements Listener {
         pv8.setDisplayName(ChatColor.LIGHT_PURPLE + "Access to 15 Player Vaults");
         pv.setItemMeta(pv8);
 
-        ItemStack homes = new ItemStack(Material.RED_BED);
+        ItemStack homes = new ItemStack(Material.LEGACY_BED);
         ItemMeta homesm = homes.getItemMeta();
         homesm.setDisplayName(ChatColor.LIGHT_PURPLE + "15 homes");
         homes.setItemMeta(homesm);
 
-        ItemStack itc = new ItemStack(Material.OAK_SIGN);
+        ItemStack itc = new ItemStack(Material.LEGACY_SIGN);
         ItemMeta itcm = itc.getItemMeta();
         itcm.setDisplayName(ChatColor.LIGHT_PURPLE + "Ability to display [item] in chat");
         itc.setItemMeta(itcm);
